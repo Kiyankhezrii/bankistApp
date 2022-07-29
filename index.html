@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="this is the bankist app and..." />
+    <meta name="keywords" content="HTML, CSS, JavaScript,bankist" />
+    <meta name="author" content="Kiyan khezri" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <script defer type="module" src="/main.js"></script>
+
+    <title>Bankist</title>
+    <link rel="icon" type="image/x-icon" href="/assets/bank.png" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="user-info">
+        <p class="user-info__name">Good afternoon,Kiyan!</p>
+      </div>
+      <div class="logo">
+        <img src="/assets/logo.png" alt="Bank Logo" class="logo__img" />
+      </div>
+      <form class="form">
+        <input type="text" placeholder="user" />
+        <input type="text" placeholder="PIN" />
+        <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+      </form>
+    </header>
+
+    <div class="content">
+      <div class="acc-infos">
+        <div class="date-time">
+          <p>Current balance</p>
+          <p class="time">As of 28/07/2022, 18:33</p>
+        </div>
+        <p class="money">25 952,59 €</p>
+      </div>
+      <div class="operations">
+        <div class="movments">
+          <div class="movment">
+            <div class="movment-left">
+              <p class="movments-number deposit">8 deposit</p>
+              <p class="movments-date">12/03/2020</p>
+            </div>
+            <p class="movments-value">1300,00 €</p>
+          </div>
+          <div class="movment">
+            <div class="movment-left">
+              <p class="movments-number withdrawal">8 deposit</p>
+              <p class="movments-date">12/03/2020</p>
+            </div>
+            <p class="movments-value">1300,00 €</p>
+          </div>
+          <div class="movment">
+            <div class="movment-left">
+              <p class="movments-number withdrawal">8 deposit</p>
+              <p class="movments-date">12/03/2020</p>
+            </div>
+            <p class="movments-value">1300,00 €</p>
+          </div>
+          <div class="movment">
+            <div class="movment-left">
+              <p class="movments-number withdrawal">8 deposit</p>
+              <p class="movments-date">12/03/2020</p>
+            </div>
+            <p class="movments-value">1300,00 €</p>
+          </div>
+          <div class="movment">
+            <div class="movment-left">
+              <p class="movments-number withdrawal">8 deposit</p>
+              <p class="movments-date">12/03/2020</p>
+            </div>
+            <p class="movments-value">1300,00 €</p>
+          </div>
+          <div class="movment">
+            <div class="movment-left">
+              <p class="movments-number deposit">8 deposit</p>
+              <p class="movments-date">12/03/2020</p>
+            </div>
+            <p class="movments-value">1300,00 €</p>
+          </div>
+        </div>
+        <div class="right-operations transfer">
+          <h3 class="operations-title">Transfer money</h3>
+          <form class="forms transfer-form">
+            <div class="lefts">
+              <input class="inputs" id="name" type="text" />
+              <label for="name">transfer to</label>
+            </div>
+            <div class="rights">
+              <input class="inputs" id="name" type="text" />
+              <label for="name">Amount</label>
+            </div>
+            <button class="btn transfer-btn" type="submit">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+        <div class="right-operations loan">
+          <h3 class="operations-title">Request loan</h3>
+          <form class="forms loan-form">
+            <div class="lefts">
+              <input class="inputs" id="name" type="text" />
+              <label for="name">Amount</label>
+            </div>
+            <button class="btn transfer-btn" type="submit">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+        <div class="right-operations close-acc">
+          <h3 class="operations-title">Close Account</h3>
+          <form class="forms close-form">
+            <div class="lefts">
+              <input class="inputs" id="name" type="text" />
+              <label for="name">Confirm User</label>
+            </div>
+            <div class="rights">
+              <input class="inputs" id="name" type="text" />
+              <label for="name">Confirm PIN</label>
+            </div>
+            <button class="btn transfer-btn" type="submit">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="left-bottom">
+          <p class="incoms">IN<span>27 035,20 €</span></p>
+          <p class="outcome">out<span>27 035,20 €</span></p>
+          <p class="interest">INTEREST<span>27 035,20 €</span></p>
+          <button><i class="fa-solid fa-arrow-down"></i>Sort</button>
+        </div>
+        <div class="right-bottom">
+          <p class="time-exit">You will be logged out in 08:00</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
