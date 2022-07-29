@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap");
+
+/*     init     */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Oswald", sans-serif;
+}
+
+body {
+  background-color: #f3f3f3;
+}
+
+/* ----APPLICATION---- */
+
+.header {
+  padding: 2rem 5.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8rem;
+}
+.user-info {
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+.logo {
+  width: 6.5rem;
+}
+.logo__img {
+  width: 100%;
+}
+.form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+.form input {
+  border: none;
+  outline: none;
+  padding: 0.8rem;
+  border-radius: 10rem;
+  width: 12rem;
+  text-align: center;
+  transition: all 0.3s;
+}
+.form input::placeholder {
+  text-align: center;
+}
+.form input:focus {
+  border: 1px solid #ccc;
+  outline: none;
+}
+.form button {
+  background-color: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2.5rem;
+}
+
+/*     -----body of app----- */
+
+.content {
+  width: 120rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+}
+.acc-infos {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+.date-time {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.2rem;
+}
+.money {
+  font-size: 3rem;
+}
+.operations {
+  width: 100rem;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 10rem;
+  row-gap: 3rem;
+}
+.movments {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2.5rem;
+  grid-row: 1/4;
+  background-color: #fff;
+  border-radius: .7rem;
+  overflow: scroll;
+  height: 50rem;
+}
+.movment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  padding: 3rem;
+  color: #464646;
+  font-size: 1.7rem;
+}
+.movment-left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.5rem;
+}
+.deposit{
+  background-color: #6FCC6F;;
+  padding: .2rem 2rem;
+  border-radius: 1.2rem;
+}
+.withdrawal{
+  padding: .2rem 2rem;
+  border-radius: 1.2rem;
+  background-color:#F13E5D;
+}
+.right-operations{
+    border-radius: .7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.transfer {
+    background-color: #FFC003;
+}
+.loan {
+  grid-column: 2/3;
+  background-color: #6FCC6F;
+}
+.close-acc {
+  grid-column: 2/3;
+  background-color: #F13E5D;
+}
+.operations-title {
+    align-self:flex-start;
+    font-size: 2rem;
+    padding: 2rem;
+}
+.forms {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    
+}
+.forms button{
+    align-self: flex-start;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    padding: .5rem 2rem;
+    border-radius: .7rem;
+}
+.inputs{
+    border: none;
+    outline: none;
+    width: 12rem;
+    padding: .5rem 3rem;
+    border-radius: .7rem;
+    align-items: center;
+}
+.loan-form {
+    width: 90%;
+}
+.lefts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.rights {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2rem;
+  padding-bottom: 7rem;
+}
+.left-bottom {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+.left-bottom p{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+.left-bottom button{
+  background-color: inherit;
+  border:none;
+  outline: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.incoms span{
+  color: #76CD82;
+}
+.outcome span {
+  color: #F5465D;
+}
+.interest span {
+  color: #76CD82;
+}
