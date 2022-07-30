@@ -74,6 +74,7 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 5rem;
+  opacity: 0;
 }
 .acc-infos {
   width: 100%;
@@ -109,7 +110,7 @@ body {
   gap: 2.5rem;
   grid-row: 1/4;
   background-color: #fff;
-  border-radius: .7rem;
+  border-radius: 0.7rem;
   overflow: scroll;
   height: 50rem;
 }
@@ -123,83 +124,84 @@ body {
   color: #464646;
   font-size: 1.7rem;
 }
-.movment-left{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2.5rem;
+.movment-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
 }
-.deposit{
-  background-color: #6FCC6F;;
-  padding: .2rem 2rem;
+.deposit {
+  background-color: #6fcc6f;
+  padding: 0.2rem 2rem;
   border-radius: 1.2rem;
+  color: #fff;
 }
-.withdrawal{
-  padding: .2rem 2rem;
+.withdrawal {
+  padding: 0.2rem 2rem;
   border-radius: 1.2rem;
-  background-color:#F13E5D;
+  background-color: #f13e5d;
+  color: #fff;
 }
-.right-operations{
-    border-radius: .7rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+.right-operations {
+  border-radius: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 .transfer {
-    background-color: #FFC003;
+  background-color: #ffc003;
 }
 .loan {
   grid-column: 2/3;
-  background-color: #6FCC6F;
+  background-color: #6fcc6f;
 }
 .close-acc {
   grid-column: 2/3;
-  background-color: #F13E5D;
+  background-color: #f13e5d;
 }
 .operations-title {
-    align-self:flex-start;
-    font-size: 2rem;
-    padding: 2rem;
+  align-self: flex-start;
+  font-size: 2rem;
+  padding: 2rem;
 }
 .forms {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-    padding: 2rem;
-    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
 }
-.forms button{
-    align-self: flex-start;
-    border: none;
-    outline: none;
-    background-color: #fff;
-    padding: .5rem 2rem;
-    border-radius: .7rem;
+.forms button {
+  align-self: flex-start;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  padding: 0.5rem 2rem;
+  border-radius: 0.7rem;
 }
-.inputs{
-    border: none;
-    outline: none;
-    width: 12rem;
-    padding: .5rem 3rem;
-    border-radius: .7rem;
-    align-items: center;
+.inputs {
+  border: none;
+  outline: none;
+  width: 12rem;
+  padding: 0.5rem 3rem;
+  border-radius: 0.7rem;
+  align-items: center;
 }
 .loan-form {
-    width: 90%;
+  width: 90%;
 }
 .lefts {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 .rights {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 .bottom {
   width: 100%;
@@ -216,25 +218,25 @@ body {
   align-items: center;
   gap: 3rem;
 }
-.left-bottom p{
+.left-bottom p {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1.5rem;
 }
-.left-bottom button{
+.left-bottom button {
   background-color: inherit;
-  border:none;
+  border: none;
   outline: none;
   font-size: 2rem;
   cursor: pointer;
 }
-.incoms span{
-  color: #76CD82;
+.incoms span {
+  color: #76cd82;
 }
 .outcome span {
-  color: #F5465D;
+  color: #f5465d;
 }
 .interest span {
-  color: #76CD82;
+  color: #76cd82;
 }
