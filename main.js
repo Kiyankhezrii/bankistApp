@@ -11,6 +11,9 @@ const topInfo = document.querySelector(".acc-infos");
 const incoms = document.querySelector(".incoms span");
 const outcome = document.querySelector(".outcome span");
 const interest = document.querySelector(".interest span");
+const content = document.querySelector(".content");
+
+let currentAcc;
 
 // render movments
 const renderMovments = function (acc) {
@@ -47,11 +50,48 @@ const calcDepoAndWith = function (acc) {
 
   outcome.textContent = acc.movements
     .filter((m) => m < 0)
-    .reduce((acc, cur) => acc + cur, 0).toFixed(2).replace("-","");
+    .reduce((acc, cur) => acc + cur, 0)
+    .toFixed(2)
+    .replace("-", "");
 
   interest.textContent = (income * acc.interestRate).toFixed(2);
 };
 
-renderMovments(accounts[0]);
-calcBalance(accounts[0]);
-calcDepoAndWith(accounts[0]);
+const userName = function (accounts) {
+  accounts.forEach((acc) => {
+    acc.userName = acc.owner
+      .toLowerCase()
+      .split(" ")
+      .map((w) => w[0])
+      .join("");
+  });
+};
+
+const logins = function (accs) {
+  const findAcc = accs.find((acc) => {
+    return (
+      acc.userName == loginForm.querySelector(".user").value &&
+      acc.pin == loginForm.querySelector(".pin").value
+    );
+  });
+  if (findAcc) {
+    currentAcc = findAcc;
+    // content.style.opacity = "1";
+  }
+};
+
+loginForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  logins(accounts);
+  loginForm.querySelector(".user").value = "";
+  loginForm.querySelector(".pin").value = "";
+  loginForm.querySelector(".pin").blur();
+  init();
+});
+
+const init = function () {
+  renderMovments(currentAcc);
+  calcBalance(currentAcc);
+  calcDepoAndWith(currentAcc);
+};
+userName(accounts);
