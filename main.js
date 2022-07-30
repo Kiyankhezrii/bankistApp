@@ -100,6 +100,33 @@ const logins = function (accs) {
   }
 };
 
+transferForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const user = transferForm.querySelector(".users");
+  const amount = transferForm.querySelector(".amount");
+
+  const accTransferTo = accounts.find((acc) => acc.userName == user.value);
+  const moneyofCurrAcc = currentAcc.movements.reduce(
+    (acc, cur) => acc + cur,
+    0
+  );
+
+  if (amount.value > 0 && amount.value < moneyofCurrAcc) {
+    const dateTransfer = new Date().toISOString();
+
+    currentAcc.movements.push(-amount.value);
+    accTransferTo.movements.push(amount.value);
+
+    currentAcc.movementsDates.push(`${dateTransfer}`);
+    accTransferTo.movementsDates.push(`${dateTransfer}`);
+
+    init();
+  }
+  user.value = "";
+  amount.value = "";
+  amount.blur();
+});
+
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
   logins(accounts);
