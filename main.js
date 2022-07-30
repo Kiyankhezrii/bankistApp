@@ -6,7 +6,7 @@ const movments = document.querySelector(".movments");
 const transferForm = document.querySelector(".transfer-form");
 const loanForm = document.querySelector(".loan-form");
 const closeForm = document.querySelector(".close-form");
-const time = document.querySelector(".time-exit");
+const timer = document.querySelector(".time-exit span");
 const topInfo = document.querySelector(".acc-infos");
 const incoms = document.querySelector(".incoms span");
 const outcome = document.querySelector(".outcome span");
@@ -97,6 +97,15 @@ const logins = function (accs) {
       2,
       "0"
     )}:${(dt.getMinutes() + "").padStart(2, "0")}`;
+    setInterval(() => {
+      timer.textContent--;
+      if (timer.textContent == 0) {
+        currentAcc = {};
+        content.style.opacity = "0";
+        cureentUserInfo.textContent = "Login to get started";
+        timer.textContent="20"
+      }
+    }, 1000);
   }
 };
 
