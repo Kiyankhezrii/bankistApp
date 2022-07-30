@@ -52,10 +52,10 @@ const calcBalance = function (acc) {
 };
 
 const calcDepoAndWith = function (acc) {
-  const income = acc.movements
+  const inc = acc.movements
     .filter((m) => m > 0)
     .reduce((acc, cur) => acc + cur, 0);
-  incoms.textContent = income.toFixed(2);
+  incoms.textContent = inc.toFixed(2);
 
   outcome.textContent = acc.movements
     .filter((m) => m < 0)
@@ -63,7 +63,7 @@ const calcDepoAndWith = function (acc) {
     .toFixed(2)
     .replace("-", "");
 
-  interest.textContent = (income * acc.interestRate).toFixed(2);
+  interest.textContent = (inc * acc.interestRate).toFixed(2);
 };
 
 const userName = function (accounts) {
@@ -115,7 +115,7 @@ transferForm.addEventListener("submit", (e) => {
     const dateTransfer = new Date().toISOString();
 
     currentAcc.movements.push(-amount.value);
-    accTransferTo.movements.push(amount.value);
+    accTransferTo.movements.push(+amount.value);
 
     currentAcc.movementsDates.push(`${dateTransfer}`);
     accTransferTo.movementsDates.push(`${dateTransfer}`);
@@ -125,6 +125,23 @@ transferForm.addEventListener("submit", (e) => {
   user.value = "";
   amount.value = "";
   amount.blur();
+});
+
+loanForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const amountLoans = loanForm.querySelector(".loans").value;
+  if (amountLoans > 0) {
+    setTimeout(() => {
+      const money = (+amountLoans * currentAcc.interestRate).toFixed(2);
+      console.log(currentAcc);
+
+      const dateTransfer = new Date().toISOString();
+      currentAcc.movements.push(+money);
+      currentAcc.movementsDates.push(`${dateTransfer}`);
+      init();
+    }, 1000);
+  }
+  loanForm.querySelector(".loans").value = "";
 });
 
 loginForm.addEventListener("submit", (e) => {
