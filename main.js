@@ -55,8 +55,8 @@ const calcDepoAndWith = function (acc) {
   const inc = acc.movements
     .filter((m) => m > 0)
     .reduce((acc, cur) => acc + cur, 0);
-  incoms.textContent = inc.toFixed(2);
 
+  incoms.textContent = inc.toFixed(2);
   outcome.textContent = acc.movements
     .filter((m) => m < 0)
     .reduce((acc, cur) => acc + cur, 0)
@@ -85,7 +85,7 @@ const logins = function (accs) {
   });
   if (findAcc) {
     currentAcc = findAcc;
-    // content.style.opacity = "1";
+    content.style.opacity = "1";
     cureentUserInfo.textContent = `Good afternoon,${
       findAcc.owner.split(" ")[0]
     }!`;
@@ -142,6 +142,21 @@ loanForm.addEventListener("submit", (e) => {
     }, 1000);
   }
   loanForm.querySelector(".loans").value = "";
+});
+
+closeForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const closeAccName = e.target.querySelector(".closeAcc");
+  const closeAccPin = e.target.querySelector(".closePin");
+  if (
+    closeAccName.value === currentAcc.userName &&
+    +closeAccPin.value === currentAcc.pin
+  ) {
+    content.style.opacity = "0";
+    cureentUserInfo.textContent = `Login to get started`;
+    closeAccName.value = closeAccPin.value = "";
+  }
 });
 
 loginForm.addEventListener("submit", (e) => {
