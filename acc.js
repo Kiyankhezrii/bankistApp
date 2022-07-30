@@ -1,4 +1,4 @@
-export const accs = [
+export const accounts = [
   {
     owner: "Jonas Schmedtmann",
     movements: [200, 455.23, -306.5, 25000, -642.21, -133.9, 79.97, 1300],
