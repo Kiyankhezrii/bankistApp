@@ -12,8 +12,11 @@ const incoms = document.querySelector(".incoms span");
 const outcome = document.querySelector(".outcome span");
 const interest = document.querySelector(".interest span");
 const content = document.querySelector(".content");
+const cureentUserInfo = document.querySelector(".user-info__name");
+const dateNow = document.querySelector(".time");
 
 let currentAcc;
+const dt = new Date();
 
 // render movments
 const renderMovments = function (acc) {
@@ -24,7 +27,13 @@ const renderMovments = function (acc) {
         <div class="movment">
             <div class="movment-left">
               <p class="movments-number ${type}">${i + 1} ${type}</p>
-              <p class="movments-date">${date.getDay()}/${date.getMonth()}/${date.getFullYear()}</p>
+              <p class="movments-date">${(date.getDate() + "").padStart(
+                2,
+                "0"
+              )}/${(date.getMonth() + 1 + "").padStart(
+      2,
+      "0"
+    )}/${date.getFullYear()}</p>
             </div>
             <p class="movments-value">${m} €</p>
           </div>
@@ -77,6 +86,17 @@ const logins = function (accs) {
   if (findAcc) {
     currentAcc = findAcc;
     // content.style.opacity = "1";
+    cureentUserInfo.textContent = `Good afternoon,${
+      findAcc.owner.split(" ")[0]
+    }!`;
+    dateNow.textContent = `As ${dt.getDate()}/${(
+      dt.getMonth() +
+      1 +
+      ""
+    ).padStart(2, "0")}/${dt.getFullYear()}, ${(dt.getHours() + "").padStart(
+      2,
+      "0"
+    )}:${(dt.getMinutes() + "").padStart(2, "0")}`;
   }
 };
 
